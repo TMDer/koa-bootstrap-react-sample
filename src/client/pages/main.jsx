@@ -36,7 +36,7 @@ module.exports = React.createClass({
       <div id="main">
         <div role="navigation" className="navbar navbar-inverse navbar-fixed-top">
           <div className="container">
-            <div className="nabar-header"><a className="navbar-brand">icafe</a></div>
+            <div className="nabar-header"><a className="navbar-brand">koa-bootstrap-react-sample</a></div>
             <div className="navbar-collapse collapse">
               <ul id="navbarmenu" className="nav navbar-nav navbar-right">
                 {lis}

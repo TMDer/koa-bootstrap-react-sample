@@ -1,4 +1,4 @@
-# icafe-portal
+# koa-bootstrap-react-sample
 
 ### Prerequisite
 

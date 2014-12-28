@@ -8,7 +8,7 @@ module.exports = React.createClass({
     return (
       <div className="jumbotron">
         <div className="container">
-          <h1>icafe portal</h1>
+          <h1>koa-bootstrap-react-sample</h1>
           <div className="row">
             <div className="col-md-8">
               <p></p>

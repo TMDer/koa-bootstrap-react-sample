@@ -1,5 +1,5 @@
 {
-  "name": "icafe-portal",
+  "name": "koa-bootstrap-react-sample",
   "version": "0.0.1",
   "description": "",
   "keywords": [
@@ -15,7 +15,7 @@
   "main": "server.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/teamcollab/icafe-portal"
+    "url": "https://github.com/smlsunxie/koa-bootstrap-react-sample"
   },
   "scripts": {
     "start": "gulp dev",
