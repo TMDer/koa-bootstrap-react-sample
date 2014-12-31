@@ -1,13 +1,13 @@
-/** @jsx React.DOM */
+
 'use strict';
-var React = require('react');
-var Carousel = require('react-bootstrap/Carousel')
-var CarouselItem = require('react-bootstrap/CarouselItem')
+React = require('react');
+Carousel = require('react-bootstrap/Carousel')
+CarouselItem = require('react-bootstrap/CarouselItem')
 
 
 module.exports = React.createClass({
 
-  render: function() {
+  render: ->
 
     return (
       <Carousel>
@@ -34,5 +34,5 @@ module.exports = React.createClass({
         </CarouselItem>
       </Carousel>
     );
-  }
+
 });

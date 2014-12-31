@@ -31,7 +31,7 @@ exports.signAgent = function (agent, done) {
   .end(function (err, res) {
     if(err) done(err);
     try {
-      res.headers.location.should.equal('/');
+      res.headers.location.should.equal('/#/');
       done();
     } catch (err) {
       done(err);

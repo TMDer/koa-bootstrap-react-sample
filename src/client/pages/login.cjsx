@@ -1,10 +1,9 @@
-/** @jsx React.DOM */
 'use strict';
-var React = window.React = require('react');
+React = window.React = require('react');
 
 module.exports = React.createClass({
 
-  render: function () {
+  render: ->
     return (
       <div className="jumbotron">
         <div className="container">
@@ -31,5 +30,4 @@ module.exports = React.createClass({
         </div>
       </div>
     );
-  }
 });

@@ -1,7 +1,11 @@
+require('coffee-react/register');
+require("coffee-script/register");
+
 'use strict';
 /**
  * Dependencies
  */
+
 var fs = require('fs');
 var koa = require('koa');
 var mongoose = require('mongoose');
@@ -41,6 +45,7 @@ require('./config/koa')(app, config, passport);
 
 // Routes
 require('./config/routes')(app, passport);
+require('./config/test-data')(config);
 
 // Start app
 if (!module.parent) {

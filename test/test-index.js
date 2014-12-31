@@ -7,6 +7,7 @@ var request = require('supertest').agent(app.listen());
 var databaseHelper = require('./middlewares/database');
 var authHelper = require('./middlewares/authenticator');
 
+
 // support for es6 generators
 var co = require('co');
 
@@ -19,14 +20,10 @@ describe('Index', function () {
   });
 
   describe('Anonymous calls', function () {
-    it('should return 302 to /login', function (done) {
+    it('should return 200 to /, on client, redirect to "/#/login" by react router', function (done) {
       request.get('/')
-      .expect(302)
-      .end(function (err, res) {
-        if(err) return done(err);
-        res.headers.location.should.equal('/login');
-        done();
-      });
+      .expect(200)
+      .end(done);
     });
   });
 
@@ -38,7 +35,14 @@ describe('Index', function () {
     it('should render the page', function (done) {
       request.get('/')
       .expect(200)
-      .end(done);
+      .end(function (err, res) {
+        if(err) return done(err);
+
+        (res.text.indexOf("var isLogin = true") >= 0).should.be.true;
+        (res.text.indexOf('var username = "test@email.com";') >= 0).should.be.true;
+
+        done();
+      });
     });
   });
 

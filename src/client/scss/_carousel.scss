@@ -12,6 +12,10 @@ body {
 -------------------------------------------------- */
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
+
+.container.marketing{
+  padding-top: 52px;
+}
 .navbar-wrapper {
   position: absolute;
   top: 0;

@@ -3,6 +3,7 @@ var router = require('koa-router');
 var countController = require('../src/controllers/count');
 var indexController = require('../src/controllers/index');
 var authController = require('../src/controllers/auth');
+var postController = require('../src/controllers/post');
 
 var secured = function *(next) {
   if (this.isAuthenticated()) {
@@ -22,6 +23,9 @@ module.exports = function (app, passport) {
     successRedirect: '/#/',
     failureRedirect: '/#/login?error=local'
   }));
+
+  app.post('/post', postController.create);
+  app.get('/post/:id', postController.show);
 
   app.all("/logout", authController.logout);
 

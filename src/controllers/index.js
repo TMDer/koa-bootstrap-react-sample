@@ -2,9 +2,12 @@ exports.index = function *() {
   var username = ""
 
   if(this.isAuthenticated())
-    username = this.passport.user.username
+    this.username = this.passport.user.username
+
+  this.isLogin = this.isAuthenticated()
+
   this.body = yield this.render("index", {
-    isLogin: this.isAuthenticated(),
-    username: username
+    isLogin: this.isLogin,
+    username: this.username
   });
 };

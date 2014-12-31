@@ -1,13 +1,13 @@
-/** @jsx React.DOM */
+
 'use strict';
-var React = require('react');
-var carouselSets = require('../components/carouselSets');
+React = require('react');
+carouselSets = require('../components/carouselSets');
 
 module.exports = React.createClass({
 
-  render: function() {
+  render: ->
 
-    var imgStyle = {
+    imgStyle = {
       width: "140px",
       height: "140px"
     }
@@ -38,5 +38,5 @@ module.exports = React.createClass({
         </div>
       </div>
     );
-  }
+
 })
